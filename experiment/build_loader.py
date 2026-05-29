@@ -52,6 +52,14 @@ def get_dataset(data, params, logger):
             dataset_test = get_birds_525(params, 'test')
         else:
             raise NotImplementedError
+    elif data.startswith("nct-crc"):
+        logger.info("Loading NCT CRC data ...")
+        if params.final_run:
+            logger.info("Loading training data (final training data for nct-crc)...")
+            dataset_train = get_crc(params, 'trainval_combined')
+            dataset_test = get_crc(params, 'test')
+        else:
+            raise NotImplementedError
     else:
         raise Exception("Dataset '{}' not supported".format(data))
     return dataset_train, dataset_val, dataset_test
