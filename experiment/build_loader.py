@@ -3,7 +3,7 @@ from data.dataset.cub import get_cub
 from data.dataset.dog import get_dog
 from data.dataset.pet import get_pet
 from data.dataset.car import get_car
-from data.dataset.car import get_crc
+from data.dataset.nct_crc import build_dataset as get_crc
 from data.dataset.birds_525 import get_birds_525
 
 from torch.utils.data.distributed import DistributedSampler
