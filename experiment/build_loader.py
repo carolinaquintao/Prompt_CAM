@@ -3,6 +3,7 @@ from data.dataset.cub import get_cub
 from data.dataset.dog import get_dog
 from data.dataset.pet import get_pet
 from data.dataset.car import get_car
+from data.dataset.car import get_crc
 from data.dataset.birds_525 import get_birds_525
 
 from torch.utils.data.distributed import DistributedSampler
@@ -52,10 +53,10 @@ def get_dataset(data, params, logger):
             dataset_test = get_birds_525(params, 'test')
         else:
             raise NotImplementedError
-    elif data.startswith("nct-crc"):
+    elif data.startswith("nct_crc"):
         logger.info("Loading NCT CRC data ...")
         if params.final_run:
-            logger.info("Loading training data (final training data for nct-crc)...")
+            logger.info("Loading training data (final training data for nct_crc)...")
             dataset_train = get_crc(params, 'trainval_combined')
             dataset_test = get_crc(params, 'test')
         else:
