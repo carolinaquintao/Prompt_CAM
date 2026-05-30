@@ -1,6 +1,6 @@
 batch_size: 16
 crop_size: 224
-data: nct-crc                                  #Change this for new dataset
+data: nct_crc                                  #Change this for new dataset
 data_path: /kaggle/input/datasets/carolinaquintao/nct-crc-prompt-dataset                #Change this for new dataset
 debug: true
 drop_path_rate: 0.1
