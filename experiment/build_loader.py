@@ -57,8 +57,8 @@ def get_dataset(data, params, logger):
         logger.info("Loading NCT CRC data ...")
         if params.final_run:
             logger.info("Loading training data (final training data for nct_crc)...")
-            dataset_train = get_crc(params, 'trainval_combined')
-            dataset_test = get_crc(params, 'test')
+            dataset_train = get_nct(params, 'trainval_combined')
+            dataset_test = get_nct(params, 'test')
         else:
             raise NotImplementedError
     else:
