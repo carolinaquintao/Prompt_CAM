@@ -73,7 +73,7 @@ def get_base_model(params,visualize=False):
                                   params=params)
         if not visualize:
             model.load_pretrained(
-            'pretrained_weights/dino_vitbase16_pretrain.pth')
+            '/kaggle/working/Prompt_CAM/pretrained_weights/pretrained_weights/dino_vitbase16_pretrain.pth')
         model.reset_classifier(params.class_num)
     elif params.pretrained_weights == 'vit_base_patch16_clip_224':
         params.patch_size = 16
