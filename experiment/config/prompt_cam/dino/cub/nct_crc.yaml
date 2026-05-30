@@ -17,7 +17,7 @@ model: dino
 momentum: 0.9
 normalized: true
 optimizer: sgd
-pretrained_weights: /kaggle/working/Prompt_CAM/pretrained_weights/dino_vitbase16_pretrain.pth
+pretrained_weights: dino_vitbase16_pretrain.pth
 random_seed: 42
 store_ckp: true
 test_batch_size: 32
